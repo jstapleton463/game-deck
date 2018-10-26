@@ -1,0 +1,86 @@
+<!-- Card 2 -->
+<div class="col-3-auto card-container" id="column">
+  <div class="card-flip container flipper" id="card-expand">
+    <!-- Card 2 Front -->
+    <div class="card front">
+      <img src="holder.js/100px180">
+      <div class="card-block">
+        <h4 class="card-title text-center">draw</h4>
+      </div>
+    </div>
+    <!-- End Card 2 Front -->
+
+    <!-- Card 2 Back -->
+    <div class="card back">
+      <img src="holder.js/100px180">
+      <div class="card-block">
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+          <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+        </button>
+        <button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="draw">-></button>
+
+      </div>
+    </div>
+    <!-- End Card 2 Back -->
+  </div>
+</div>
+<!-- End Card 2 -->
+
+<!-- Card 3 -->
+<div class="col-3-auto card-container" id="column">
+  <div class="card-flip container flipper" id="card-expand">
+    <!-- Card 3 Front -->
+    <div class="card front">
+      <img src="holder.js/100px180">
+      <div class="card-block">
+        <h4 class="card-title text-center">move</h4>
+      </div>
+    </div>
+    <!-- End Card 3 Front -->
+
+    <!-- Card 2 Back -->
+    <div class="card back">
+      <img src="holder.js/100px180">
+      <div class="card-block">
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+          <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+        </button>
+        <button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="move">-></button>
+
+      </div>
+    </div>
+    <!-- End Card 3 Back -->
+  </div>
+</div>
+<!-- End Card 3 -->
+
+<!-- Card 4 -->
+<div class="col-3-auto card-container" id="column">
+  <div class="card-flip container flipper" id="card-expand">
+    <!-- Card 4 Front -->
+    <div class="card front">
+      <img src="holder.js/100px180">
+      <div class="card-block">
+        <h4 class="card-title text-center">placeholder</h4>
+      </div>
+    </div>
+    <!-- End Card 4 Front -->
+
+    <!-- Card 4 Back -->
+    <div class="card back">
+      <img src="holder.js/100px180">
+      <div class="card-block">
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+          <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+        </button>
+        <button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="placeholder">-></button>
+
+      </div>
+    </div>
+    <!-- End Card 4 Back -->
+  </div>
+</div>
+<!-- End Card 4 -->

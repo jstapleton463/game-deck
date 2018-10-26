@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cards Flipping</title>
+
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='css/prism.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<!-- Unique ids include id of button (make it the title of the card),
+the id of the back gif image (unexpand-cardTitle),
+and the id of the expandable section (expand-cardTitle)-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-3-auto" id="column">
+        <div class="card-container">
+          <div class="card-flip container flipper" id="card-expand">
+            <!-- Card 1 Front -->
+            <div class="card front">
+              <img src="assets/helloWorld.gif" alt="outputting hello, world"  style="height: 180px; width: 100%;">
+              <div class="card-block">
+                <h4 class="card-title text-center">print</h4>
+              </div>
+            </div>
+            <!-- End Card 1 Front -->
+            <!-- Card 1 Back -->
+            <div class="card back">
+              <div id="unexpand-print">
+                <img id="print-example" src="assets/print.gif" alt="outputting hello, world"  style="height: 180px; width: 100%; display: block;">
+              </div>
+              <div class="hide" id="expand-print">
+                <h1 class="expand-title">print</h1>
+                <div class="row" style="padding: 10px;">
+                  <div class="col">
+                    <iframe src="https://drive.google.com/file/d/1t8Bc7Wl42bMogQjY79Bqr_ZYgoPE-OUP/preview" style="width: 100%; height: 100%;"></iframe>
+                  </div>
+                  <div class="col">
+                    <pre><code class="language-lua">function love.load()
+  --We don't need to load any assets
+end
+
+function love.update()
+  --We don't need to move things around, either
+end
+
+function love.draw()
+  --print message to middle of screen
+  love.graphics.print("Hello, World", 400, 300)
+end
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="card-block">
+
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+                  <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+                </button>
+                <!--<button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="print">-></button>-->
+                <img src="assets/expand.png" class="expand-button" onclick="expand(this.id)" id="print" style="height: 36px; margin-left: 15px;">
+
+              </div>
+            </div>
+            <!-- End Card 1 Back -->
+          </div>
+        </div>
+      </div>
+      <!-- End Card 1 -->
+      <!-- Card 2 -->
+      <div class="col-3-auto card-container" id="column">
+        <div class="card-flip container flipper" id="card-expand">
+          <!-- Card 2 Front -->
+          <div class="card front">
+            <img src="assets/draw-front.gif" style="height: 180px; width: 100%; display: block;">
+            <div class="card-block">
+              <h4 class="card-title text-center">draw</h4>
+            </div>
+          </div>
+          <!-- End Card 2 Front -->
+
+          <!-- Card 2 Back -->
+          <div class="card back">
+            <div id="unexpand-draw">
+              <img src="assets/draw.gif" id="draw-example" alt="draw code example" style="height: 180px; width: 100%;">
+            </div>
+            <div class="hide" id="expand-draw">
+              <h1 class="expand-draw">draw</h1>
+              <div class="row" style="padding: 10px;">
+                <div class="col">
+                  <pre><code class="language-lua">function love.load()
+--Store an image in a variable named "sprite"
+  sprite = love.graphics.newImage("myimage.png")
+end
+
+function love.update()
+--We don't need to update anything
+end
+
+function love.draw()
+--Draw the sprite to the screen
+  love.graphics.draw(sprite, 400, 300)
+end
+                  </code></pre>
+                </div>
+                <div class="col">
+                  <iframe src="https://drive.google.com/file/d/1t8Bc7Wl42bMogQjY79Bqr_ZYgoPE-OUP/preview" style="width: 100%; height: 100%;"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="card-block">
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+                <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+              </button>
+              <!--<button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="draw">-></button>-->
+              <img src="assets/expand.png" class="expand-button" onclick="expand(this.id)" id="draw" style="height: 36px; margin-left: 15px;">
+
+            </div>
+          </div>
+          <!-- End Card 2 Back -->
+        </div>
+      </div>
+      <!-- End Card 2 -->
+
+      <!-- Card 3 -->
+      <div class="col-3-auto card-container" id="column">
+        <div class="card-flip container flipper" id="card-expand">
+          <!-- Card 3 Front -->
+          <div class="card front">
+            <img src="holder.js/100px180">
+            <div class="card-block">
+              <h4 class="card-title text-center">move</h4>
+            </div>
+          </div>
+          <!-- End Card 3 Front -->
+
+          <!-- Card 2 Back -->
+          <div class="card back">
+            <img src="holder.js/100px180">
+            <div class="card-block">
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+                <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+              </button>
+              <!--<button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="move">-></button>-->
+              <img src="assets/expand.png" class="expand-button" onclick="expand(this.id)" id="move" style="height: 36px; margin-left: 15px;">
+
+            </div>
+          </div>
+          <!-- End Card 3 Back -->
+        </div>
+      </div>
+      <!-- End Card 3 -->
+
+      <!-- Card 4 -->
+      <div class="col-3-auto card-container" id="column">
+        <div class="card-flip container flipper" id="card-expand">
+          <!-- Card 4 Front -->
+          <div class="card front">
+            <img src="holder.js/100px180">
+            <div class="card-block">
+              <h4 class="card-title text-center">placeholder</h4>
+            </div>
+          </div>
+          <!-- End Card 4 Front -->
+
+          <!-- Card 4 Back -->
+          <div class="card back">
+            <img src="holder.js/100px180">
+            <div class="card-block">
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+                <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+              </button>
+              <!--<button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="placeholder">-></button>-->
+              <img src="assets/expand.png" class="expand-button" onclick="expand(this.id)" id="placeholder" style="height: 36px; margin-left: 15px;">
+
+            </div>
+          </div>
+          <!-- End Card 4 Back -->
+        </div>
+      </div>
+      <!-- End Card 4 -->
+      <!-- Card 5 -->
+      <div class="col-3-auto" id="column">
+        <div class="card-container">
+          <div class="card-flip container flipper" id="card-expand">
+            <!-- Card 1 Front -->
+            <div class="card front">
+              <img src="assets/helloWorld.gif" alt="outputting hello, world"  style="height: 180px; width: 100%;">
+              <div class="card-block">
+                <h4 class="card-title text-center">random</h4> <!-- Change title -->
+              </div>
+            </div>
+            <!-- End Card 5 Front -->
+            <!-- Card 5 Back -->
+            <div class="card back">
+              <div id="unexpand-random"><!-- Change to title of card : id-->
+                <img id="random-example" src="assets/print.gif" alt="outputting hello, world"  style="height: 180px; width: 100%; display: block;"> <!--Change img id -->
+              </div>
+              <div class="hide" id="expand-random"> <!-- Change class id -->
+                <h1 class="expand-title">random</h1><!-- Change title -->
+                <div class="row" style="padding: 10px;">
+                  <div class="col">
+                    <iframe src="https://drive.google.com/file/d/1t8Bc7Wl42bMogQjY79Bqr_ZYgoPE-OUP/preview" style="width: 100%; height: 100%;"></iframe>
+                  </div>
+                  <div class="col">
+                    <pre><code class="language-lua">function love.load()
+  --We don't need to load any assets
+end
+
+function love.update()
+  --We don't need to move things around, either
+end
+
+function love.draw()
+  --print message to middle of screen
+  love.graphics.print("Hello, World", 400, 300)
+end
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="card-block">
+
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" title="copy code to clipboard">copy</button>
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" title="View code on GitHub" style="padding: 7px;">
+                  <img src="http://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png" style="height: 24px; filter: invert(100%);">
+                </button>
+                <!--<button class="btn btn-primary" data-toggle="tooltip" title="expand" onclick="expand(this.id)" id="print">-></button>-->
+                <img src="assets/expand.png" class="expand-button" onclick="expand(this.id)" id="random" style="height: 36px; margin-left: 15px;"><!-- Change title of id-->
+
+              </div>
+            </div>
+            <!-- End Card 5 Back -->
+          </div>
+        </div>
+      </div>
+      <!-- End Card 5 -->
+
+
+
+
+    </div><!--End card deck/row-->
+  </div>
+
+  <script src="js/prism.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+  <script src='https://use.fontawesome.com/e07be0b1c4.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js'></script>
+  <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
